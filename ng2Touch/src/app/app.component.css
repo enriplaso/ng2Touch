@@ -1,6 +1,6 @@
-.touch-area {
+.container {
     width: 800px;
-    height: 500px;
+    height: 600px;
     border: 2px solid;
     display: table-cell;
     vertical-align: middle;
@@ -8,9 +8,9 @@
     margin: 0 auto;
 }
 
-.touch-area .touch-item {
-    width: 60px;
-    height: 60px;
+.container .touch-item {
+    width: 160px;
+    height: 160px;
     background-color: rebeccapurple;
     display: inline-block;
     margin: auto;

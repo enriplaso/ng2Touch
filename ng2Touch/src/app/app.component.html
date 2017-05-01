@@ -1,4 +1,4 @@
-<div class="touch-area">
-  <div #item class="touch-item"> 
+<div class="container" >
+  <div #item class="touch-item" (touchstart)="onTouchStart($event)" (touchmove)="onTouchMove($event)" (touchend)="onTouchEnd($event)"> 
   </div>
 </div>
