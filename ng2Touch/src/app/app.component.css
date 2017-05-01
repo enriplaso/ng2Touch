@@ -1,0 +1,17 @@
+.touch-area {
+    width: 800px;
+    height: 500px;
+    border: 2px solid;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.touch-area .touch-item {
+    width: 60px;
+    height: 60px;
+    background-color: rebeccapurple;
+    display: inline-block;
+    margin: auto;
+}
