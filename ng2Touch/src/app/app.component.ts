@@ -21,19 +21,16 @@ export class AppComponent {
   }
 
   private onTouchStart(event: any): void {
-    console.log(event);
     event.preventDefault();
     this.touchStartClientX = event.changedTouches[0].clientX;
     this.touchStartClientY = event.changedTouches[0].clientY;
   }
 
   private onTouchMove(event): void {
-
-    this.translate(  this.getDeltaX(event)+this.translatedX,  this.getDeltaY(event)+this.translatedY);
+    this.translate(this.getDeltaX(event)+this.translatedX,  this.getDeltaY(event)+this.translatedY);
   }
 
   private onTouchEnd(event): void {
-    console.log('Move end');
     this.translatedX = this.translatedX + this.getDeltaX(event);
     this.translatedY = this.translatedY + this.getDeltaY(event);
   }
@@ -42,18 +39,15 @@ export class AppComponent {
     this.item.nativeElement.style.transform = "translate3D(" + x + "px," + y + "px,0)";
   }
 
-  private getDeltaX(event: any): number{
-    
+  private getDeltaX(event: any): number {
     if(event.changedTouches){
-      console.log(event.changedTouches[0].clientX - this.touchStartClientX);
       return event.changedTouches[0].clientX - this.touchStartClientX;
     }
     return 0;
   }
   
-  private getDeltaY(event: any): number{
+  private getDeltaY(event: any): number {
     if(event.changedTouches){
-      console.log(event.changedTouches[0].clientY - this.touchStartClientY);
       return event.changedTouches[0].clientY - this.touchStartClientY;
     }
     return 0;
